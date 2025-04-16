@@ -10,6 +10,7 @@ import Roleplay from "./pages/Roleplay";
 import Pronunciation from "./pages/Pronunciation";
 import GetStarted from "./pages/GetStarted";
 import NotFound from "./pages/NotFound";
+import GrammarCorrection from "./pages/GrammarCorrection";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/roleplay" element={<Roleplay />} />
             <Route path="/pronunciation" element={<Pronunciation />} />
             <Route path="/get-started" element={<GetStarted />} />
+            <Route path="/grammar-correction" element={<GrammarCorrection />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
