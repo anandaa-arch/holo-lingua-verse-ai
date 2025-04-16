@@ -1,14 +1,16 @@
-
+import React from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { 
   Globe, Users, Mic, Brain, Sparkles, BookOpen, 
-  Languages, Layers, Wand2, BarChart4, Trophy, Heart 
+  Languages, Layers, Wand2, BarChart4, Trophy, Heart, SpellCheck 
 } from "lucide-react";
 
 const Features = () => {
+  
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -193,6 +195,60 @@ const Features = () => {
             </div>
           </div>
         </section>
+        
+        {/* Grammar Correction Feature */}
+        <div className="mb-24">
+          <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+            <div className="md:w-1/2">
+              <div className="bg-gradient-to-r from-varna-accent-teal/20 to-varna-purple/20 p-1 rounded-lg">
+                <div className="bg-card rounded-lg p-8 border border-white/10">
+                  <div className="h-64 flex items-center justify-center relative">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-40 h-40 rounded-full bg-gradient-radial from-varna-accent-teal/30 to-transparent animate-pulse"></div>
+                    </div>
+                    <div className="relative z-10">
+                      <div className="w-40 h-40 rounded-full bg-gradient-to-r from-varna-accent-teal/30 to-varna-purple/30 flex items-center justify-center border border-white/30 shadow-holo animate-float">
+                        <SpellCheck className="h-20 w-20 text-white/80" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-1/2">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="h-8 w-1 bg-varna-accent-teal rounded-full"></div>
+                <h2 className="text-3xl font-bold">AI Grammar Correction</h2>
+              </div>
+              <p className="text-muted-foreground mb-6">
+                Elevate your language skills with our advanced AI-powered grammar correction system. Get instant, context-aware feedback that helps you understand and improve your writing.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-2">
+                  <div className="rounded-full bg-varna-accent-teal/10 p-1">
+                    <Sparkles className="h-4 w-4 text-varna-accent-teal" />
+                  </div>
+                  <span>Real-time grammar and style suggestions</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="rounded-full bg-varna-accent-teal/10 p-1">
+                    <Sparkles className="h-4 w-4 text-varna-accent-teal" />
+                  </div>
+                  <span>Contextual language improvement tips</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="rounded-full bg-varna-accent-teal/10 p-1">
+                    <Sparkles className="h-4 w-4 text-varna-accent-teal" />
+                  </div>
+                  <span>Multi-language grammar support</span>
+                </li>
+              </ul>
+              <Button className="bg-gradient-to-r from-varna-accent-teal to-varna-purple hover:opacity-90 transition-opacity" asChild>
+                <Link to="/grammar-correction">Try Grammar Coach</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
         
         {/* Additional features grid */}
         <section className="py-16 px-4 bg-gradient-to-b from-background to-varna-purple/5">
